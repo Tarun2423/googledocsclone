@@ -1,0 +1,139 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F3F3F3;
+  
+  margin: 0;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+height: 8px;
+}
+::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-border-radius:10px;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+  -webkit-border-radius:10px;
+  border-radius: 10px;
+  background: rgba(164, 163, 163, 0.3);
+  -webkit-box-shadow:inset 0 0 6px rgba(14, 12, 12, 0.5)
+}
+
+::-webkit-scrollbar-thumb:window-inactive{
+  background: rgba(8, 7, 7, 0.3);
+}
+
+.nav{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  height: 80px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #cae7f5;
+}
+.container .ql-editor {
+  width: 11.5in;
+  min-height: 9in;
+  padding: 1in;
+  margin: 1rem;
+  margin-top: 3%;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+  background-color: white;
+  
+}
+
+.glogo{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  gap:1em;
+  font-weight:100;
+}
+.profile{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  gap:1em;
+  font-weight:100;
+}
+
+
+.back{
+  width: 90%;
+  height: 100%;
+  align-items: center;
+  margin: auto;
+  background-color: #d9ebf4;
+}
+
+
+.container .ql-container.ql-snow {
+  display: flex;
+  margin: auto;
+  z-index: 2;
+  justify-content: center;
+  background-color: #ecf7fceb;
+  width: 14in;
+  height: 8in;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.side{
+  width: 4.7%;
+  height:122vh;
+  background: rgb(250, 254, 255);
+  right: 0;
+  top: 0;
+  position:absolute;
+}
+.container .ql-toolbar.ql-snow {
+  width: 70%;
+  display: flex;
+margin-left: 210px;
+margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  position: sticky;
+  top: 80px;
+  z-index: 9;
+  background-color: #ecf7fceb;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+}
+
+@page {
+  margin: 1in;
+}
+
+@media print {
+  body {
+    background: none;
+  }
+
+  .container .ql-editor {
+    width: 6.5in;
+    height: 9in;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    align-self: flex-start;
+  }
+
+  .container .ql-toolbar.ql-snow {
+    display: none;
+  }
+}
